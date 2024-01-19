@@ -68,7 +68,7 @@ module.exports = React.createClass({displayName: 'exports',
         return {
             settingsOpen: false,
             code: app.store.code,
-            modalOpen: true
+            modalOpen: false
         };
     },
 
