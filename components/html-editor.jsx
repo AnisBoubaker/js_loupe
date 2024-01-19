@@ -35,7 +35,7 @@ module.exports = React.createClass({
         if (this.state.editing) {
             return (
               <div className="flexChild columnParent">
-                <div className='editor-switch'><button onClick={this.switchMode}>Save</button></div>
+                <div className='editor-switch'><button onClick={this.switchMode}>Enregistrer</button></div>
                 <AceEditor
                     mode="html"
                     onBlur={this.onEditBlur}
@@ -50,7 +50,7 @@ module.exports = React.createClass({
 
         return (
           <div className="flexChild columnParent">
-            <div className='editor-switch'><button onClick={this.switchMode}>Edit</button></div>
+            <div className='editor-switch'><button onClick={this.switchMode}>Modifier</button></div>
             <div className='html-scratchpad flexChild' dangerouslySetInnerHTML={innerHTML}></div>
           </div>
         );

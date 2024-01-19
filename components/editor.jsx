@@ -72,7 +72,7 @@ module.exports = React.createClass({
             return (
                 <div className="flexChild columnParent">
                     <div className='editor-switch'>
-                        <button onClick={this.saveAndRunCode}>Save + Run</button>
+                        <button onClick={this.saveAndRunCode}>Exécuter</button>
                     </div>
                     <AceEditor
                         mode="javascript"
@@ -89,10 +89,10 @@ module.exports = React.createClass({
             return (
                 <div className="flexChild columnParent">
                     <div className='editor-switch'>
-                        <button onClick={this.onEditFocus}>Edit</button>
-                        <button onClick={this.runCode}>Rerun</button>
+                        <button onClick={this.onEditFocus}>Modifier</button>
+                        <button onClick={this.runCode}>Ré-exécuter</button>
                         <button onClick={this.pauseCode}>Pause</button>
-                        <button onClick={this.resumeCode}>Resume</button>
+                        <button onClick={this.resumeCode}>Reprendre</button>
                     </div>
                     <div
                       className="editor flexChild"

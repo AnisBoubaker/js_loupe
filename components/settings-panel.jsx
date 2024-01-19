@@ -32,11 +32,11 @@ module.exports = React.createClass({
           <div className={classes}>
             <div className="setting">
               <label>
-                Delay: {this.state.code.delay}ms
-                <input type="range" ref="delay" onChange={this.changeDelay} min="0" max="2000" initialValue={this.state.code.delay}/>
+                Délai: {this.state.code.delay}ms
+                <input type="range" ref="delay" onChange={this.changeDelay} min="0" max="5000" initialValue={this.state.code.delay}/>
               </label>
               <label>
-                Simulate Renders:
+                Simuler le rendu:
                 <input type="checkbox" ref="renders" onChange={this.changeRenders} />
               </label>
             </div>

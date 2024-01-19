@@ -51,7 +51,7 @@ module.exports = React.createClass({
               <nav className="top-nav">
                 <button className='settings-button' onClick={this.toggleSettings}>⚒</button>
                 <h1>loupe</h1>
-                <a className='modal-button' onClick={this.openModal}>help</a>
+                <a className='modal-button' onClick={this.openModal}>aide</a>
               </nav>
               <div className="flexChild rowParent">
                 <SettingsPanel open={this.state.settingsOpen}/>
@@ -92,38 +92,36 @@ module.exports = React.createClass({
                 isOpen={this.state.modalOpen}
                 onRequestClose={this.closeModal}>
 
-                <a className="modalClose" onClick={this.closeModal}>close</a>
+                <a className="modalClose" onClick={this.closeModal}>fermer</a>
 
                 <h1>Loupe</h1>
                 <h2>Intro</h2>
-                <p>Loupe is a little visualisation to help you understand how JavaScript's call stack/event loop/callback queue interact with each other.</p>
-                <p>The best thing to do to understand how this works is watch this video, then when you are ready, <a onClick={this.closeModal}>go play!</a></p>
-                <iframe width="444" height="250" src="//www.youtube.com/embed/8aGhZQkoFbQ" frameBorder="0" allowFullScreen></iframe>
+                <p>Loupe est un outil de visualisation pour vous aider à comprendre comment la boucle d'événement de JavaScript fonctionne.</p>
                 <h2>Instructions</h2>
                 <ul>
-                    <li>Write some code in the text editor on the left.</li>
-                    <li>Hit the save-and-run button and watch it run.</li>
-                    <li>You can create html elements in the gray box at the bottom left by hitting the edit button.</li>
-                    <li>Listen for DOM events on them with <pre>$.on("button", "click", function () {'{'} console.log("hello") {'}'}</pre></li>
-                    <li>Hit the tool icon at the top left to open a menu with extra settings.</li>
-                    <li>Need more help? Ping <a href="http://twitter.com/philip_roberts">@philip_roberts</a> on twitter.</li>
+                    <li>Écrire du code javascript dans l'éditeur de gauche.</li>
+                    <li>Presser le bouton "Enregister + Run" pour visualiser l'exécution.</li>
+                    <li>Il est possible de créer des élément HTML dans la boite en bas à gauche en pressant le bouton "Modifier".</li>
+                    <li>Ensuite, intercepter les événements du DIM avec <pre>$.on("button", "click", function () {'{'} console.log("hello") {'}'}</pre></li>
+                    <li>Cliquer sur l'icône d'outils en haut à gauche pour plus d'options.</li>
+                    <li>Besoin d'aide? Envoyez un message à <a href="http://x.com/philip_roberts">@philip_roberts</a> sur X.</li>
                 </ul>
 
-                <h2>How does this work?</h2>
+                <h2>Comme ça marche?</h2>
                 <ul>
-                    <li>Loupe runs entirely in your browser.</li>
-                    <li>It takes your code.</li>
-                    <li>Runs it through esprima, a JS parser.</li>
-                    <li>Instruments it a bunch so that loupe knows where function calls, timeouts, dom events, etc happen.</li>
-                    <li>Adds a whole bunch of while loops everywhere to slow down the code as it runs.</li>
-                    <li>This modified code is then turned back into JavaScript and sent to a webworker (in your browser) which runs it.</li>
-                    <li>As it runs, the instrumentation sends messages to the visualisation about what is going on so it can animate things at the right time.</li>
-                    <li>It also has some extra magic to make dom events, and timers work properly.</li>
+                    <li>Loupe s'exécute entièrement dans votre navigateur.</li>
+                    <li>Ça prend votre code.</li>
+                    <li>Ça l'exécute à travers esprima, un parseur JavaScript.</li>
+                    <li>Le code est modifié de sorte que loupe sache où les appels de fonctions, timeouts, événements du DOM, etc se produisent.</li>
+                    <li>Ça ajoute un paquet de boucles while pour ralentir l'exécution.</li>
+                    <li>Ce code modifié est ensuite converti en JavaScript et envoyé à un Webworker (dans votre navigateur) qui l'exécute.</li>
+                    <li>Pendant qu'il s'exécute, le code qui a été ajouté envoie des messages à la visualisation pour illustrer ce qui se passe, permettant ainsi les animations au bon moment.</li>
+                    <li>Il ajoute aussi quelques truc magiques pour permettre le fonctionnement adéquat des événements du DOM et des timers.</li>
                 </ul>
 
-                <p className="info"><em>Built by <a href="http://github.com/latentflip">Philip Roberts</a> from <a href="http://andyet.com">&amp;yet</a>. Code is on <a href="https://github.com/latentflip/loupe">github</a></em>.</p>
+                <p className="info"><em>Créé par <a href="http://github.com/latentflip">Philip Roberts</a> de <a href="http://andyet.com">&amp;yet</a>. Le code est sur <a href="https://github.com/latentflip/loupe">github</a></em>.</p>
 
-                <p className="info">Got it? <a onClick={this.closeModal}>Close this dialog</a></p>
+                <p className="info">Tout compris? <a onClick={this.closeModal}>Fermer cette boite</a></p>
             </Modal>
           </div>
         )

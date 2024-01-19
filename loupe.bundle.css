@@ -358,19 +358,19 @@ color: #666;
 }
 
 .webapis:before {
-  content: "Web Apis";
+  content: "APIs Web";
 }
 
 .stack-wrapper:before {
-  content: "Call Stack";
+  content: "Pile d'appels";
 }
 
 .callback-queue:before {
-  content: "Callback Queue";
+  content: "File des fonctions de rappel";
 }
 
 .callback-queue.render-queue:before {
-  content: "Render Queue";
+  content: "File de rendus";
 }
 
 .stack {
