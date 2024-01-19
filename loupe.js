@@ -114,7 +114,7 @@ app.store.renderQueue.on('add', function () {
     }
 });
 
-if (window.location.origin.match('anisboubaker.github.io')) {
+if (window.location.origin.match('github.io')) {
     window.app.router.history.start({ pushState: true, root: '/TCH056/diapos/js_loupe/' });
 } else {
     window.app.router.history.start({ pushState: true });
